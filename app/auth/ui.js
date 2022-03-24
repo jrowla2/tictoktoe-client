@@ -2,6 +2,12 @@
 
 const store = require('../store.js')
 
+// this function is hiding the auth class in html until signed in
+// could probably hide in css as well to avoid flickering
+$(function () {
+  $('#auth').hide()
+})
+
 const onSignUpSuccess = function () {
   $('#auth-display').html('<p>User signed up successfully</p>')
 
@@ -25,10 +31,12 @@ const onSignInSuccess = function (response) {
   // reset single form
   // $('#sign-in-form').trigger('reset')
 
-  $('#unauth').hide
+  // these functions are toggling what classes of html are shown
+  $('#unAuth').hide()
+  $('#auth').show()
 }
 
-const onSignInFailure = function () {
+const onSignInFailure = () => {
   $('#auth-display').html('<p>Error while signing in</p>')
 }
 
@@ -46,6 +54,9 @@ const onSignOutSuccess = function () {
   $('#auth-display').html('<p>User signed out successfully</p>')
 
   $('form').trigger('reset')
+  // these functions are hiding the game and showing the log in
+  $('#auth').hide()
+  $('#unAuth').show()
 }
 
 const onSignOutFailure = function () {
