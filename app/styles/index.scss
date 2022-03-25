@@ -1,1 +1,37 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    background-color: darkgrey;
+}
+
+// .game-board {
+//     display: grid;
+//     grid-template-rows: 100px 100px 100px;
+//     grid-template-columns: 100px 100px 100px;
+// }
+
+
+
+.game-board {
+  display: flex;                       /* establish flex container */
+  flex-wrap: wrap;                     /* enable flex items to wrap */
+  justify-content: space-around;
+  
+}
+.box {
+  flex: 0 0 32%;               /* don't grow, don't shrink, width */
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.boxOdd {
+    background-color: pink;
+}
+
+.boxEven {
+    background-color: cyan;
+}
