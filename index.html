@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic Toc Toe Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+      <h1>Tic Toc Toe</h1>
+      <div id="unAuth">
+        <h3>If it's your first time, please sign up below</h3>
+        <form id="sign-up-form">
+          <input name="credentials[email]" type="email" placeholder="Email">
+          <input name="credentials[password]" type="password" placeholder="Enter password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="Enter password again">
+          <button type="submit">Sign-Up</button>
+        </form>
+        
+        <h3>Following sign-up, please sign-in</h3>
+        <form id="sign-in-form">
+          <input name="credentials[email]" type="email" placeholder="Email">
+          <input name="credentials[password]" type="password" placeholder="Enter password">
+          <button type="submit">Sign-In</button>
+        </form>
+        
+        <h3>Change Password</h3>
+        <form id="change-password-form">
+          <input name="passwords[old]" type="password" placeholder="Enter old password">
+          <input name="passwords[new]" type="password" placeholder="Enter new password">
+          <button type="submit">Change Password</button>
+        </form>
+        
+        
+        
+        <section id="auth-display"></section>
+      </div>
+
+  <!-- the game user view -->
+      <div id="auth" class="container">
+        <h1>Welcome!</h1>
+        <h2>Let's play the game</h2>
+        <div class="row">
+          <div class="col-4 col-lg-3 box alt-color">a1</div>
+          <div class="col-4 col-lg-3 box alt-color">a2</div>
+          <div class="col-4 col-lg-3 box alt-color">a3</div>
+          <div class="col-4 col-lg-3 box alt-color">b1</div>
+          <div class="col-4 col-lg-6 box alt-color">b2</div>
+          <div class="col-4 col-lg-6 box alt-color">b3</div>
+          <div class="col-4 col-lg-6 box alt-color">c1</div>
+          <div class="col-4 col-lg-6 box alt-color">c2</div>
+          <div class="col-4 col-lg-6 box alt-color">c3</div>
+        </div>
+        
+        <button id="sign-out-button">Sign-Out</button>
+      </div>
+    </body>
+</html>
