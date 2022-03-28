@@ -26,6 +26,9 @@ body {
   flex: 0 0 32%;               /* don't grow, don't shrink, width */
   height: 100px;
   margin-bottom: 5px;
+  font-size: 95px;
+  line-height: 100px;
+  vertical-align: middle;
 }
 
 .boxOdd {
@@ -34,4 +37,8 @@ body {
 
 .boxEven {
     background-color: cyan;
+}
+.result {
+  font-size: 40px;
+  color: greenyellow;
 }
