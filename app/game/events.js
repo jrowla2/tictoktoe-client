@@ -1,24 +1,28 @@
 'use strict'
 
-const store = require('../store.js')
+// const store = require('../store.js')
+const gameApi = require('../auth/api.js')
 let move = 1
 let play = true
+let turn = 'x'
 
 const onClickBox = function (event) {
   console.log(event.target.id + ' button clicked')
-  if ($(this).text() == '' && play) {
-    if ((move % 2) == 1) {
+  const index = $(event.target).data('cell-index')
+  if ($(this).text() === '' && play) {
+    if (turn === 'x') {
       $(this).append('X')
     } else {
       $(this).append('O')
     }
+
     move++
+
     if (findWinner() !== -1 && findWinner() !== '') {
       play = false
       console.log(findWinner())
 
       if (findWinner() === 'X') {
-        // 
         $('#result').text('X is Winner')
         $('#result').css('color', 'green')
         $('#result').css('font-size', '40px')
@@ -33,6 +37,20 @@ const onClickBox = function (event) {
       $('#result').css('font-size', '40px')
     }
   }
+  const gamePlay = {
+    game: {
+      cell: {
+        index: index,
+        value: turn
+      },
+      over: findWinner() !== ''
+    }
+  }
+  console.log(gamePlay)
+  gameApi.updateGame(gamePlay)
+  if (turn === 'x') {
+    turn = 'o'
+  } else { turn = 'x' }
 }
 
 const onRestart = function (event) {

@@ -30,6 +30,7 @@ const onSignIn = function (event) {
     .signIn(data)
     .then((response) => authUi.onSignInSuccess(response))
     .then(() => authApi.createGame())
+    .then(authUi.onNewGameSuccess)
     .then((response) => console.log(response))
     .catch(() => authUi.onSignInFailure())
 }
@@ -54,7 +55,6 @@ const onSignOut = function () {
     .then(() => authUi.onSignOutSuccess())
     .catch(() => authUi.onSignOutFailure())
 }
-
 
 module.exports = {
   onSignUp,

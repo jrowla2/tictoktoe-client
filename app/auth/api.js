@@ -51,14 +51,14 @@ const createGame = function () {
   })
 }
 
-const updateGame = function () {
+const updateGame = function (play) {
   return $.ajax({
     method: 'PATCH',
-    url: 'https://tic-tac-toe-api-development.herokuapp.com/games/:id',
+    url: 'https://tic-tac-toe-api-development.herokuapp.com/games/' + store.game._id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: {}
+    data: play
   })
 }
 
@@ -67,5 +67,6 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  createGame
+  createGame,
+  updateGame
 }

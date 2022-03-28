@@ -4,9 +4,9 @@ const store = require('../store.js')
 
 // this function is hiding the auth class in html until signed in
 // could probably hide in css as well to avoid flickering
-// $(function () {
-//   $('#auth').hide()
-// })
+$(function () {
+  $('#auth').hide()
+})
 
 const onSignUpSuccess = function () {
   $('#auth-display').html('<p>User signed up successfully</p>')
@@ -63,6 +63,14 @@ const onSignOutFailure = function () {
   $('#auth-display').html('<p>Error while signing out</p>')
 }
 
+const onNewGameSuccess = function (response) {
+  $('#auth-display').html('<p>User signed in successfully</p>')
+
+  console.log(response)
+  // store data from the response in my store object
+  store.game = response.game
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -71,5 +79,6 @@ module.exports = {
   onChangePasswordSuccess,
   onChangePasswordFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onNewGameSuccess
 }
