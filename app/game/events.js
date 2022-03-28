@@ -18,6 +18,7 @@ const onClickBox = function (event) {
       console.log(findWinner())
 
       if (findWinner() === 'X') {
+        // 
         $('#result').text('X is Winner')
         $('#result').css('color', 'green')
         $('#result').css('font-size', '40px')

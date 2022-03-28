@@ -29,6 +29,8 @@ const onSignIn = function (event) {
   authApi
     .signIn(data)
     .then((response) => authUi.onSignInSuccess(response))
+    .then(() => authApi.createGame())
+    .then((response) => console.log(response))
     .catch(() => authUi.onSignInFailure())
 }
 
