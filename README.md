@@ -1,10 +1,9 @@
 # tictoktoe-client
-tik tok toe game from api
+tik tak toe game from api
 
 # Application Title: A Description
 
-This application allows the user to do x, y, and z. Maybe here's a reason why I
-wanted to do this project, or came up with this idea.
+This application is a game of tik tak toe between two players where you must login to play.
 
 ## Important Links
 
@@ -14,12 +13,12 @@ wanted to do this project, or came up with this idea.
 
 ### User Stories
 
-- As a user I want to sign in/up
-- As a user I want to Create a new < resource >
-- As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
-- As a user I want to Update a < resource > I own
-- As a user I want to Delete a < resource > I own
+- As a user, I want to select either x or o to start with.
+- As a user, I want to know if I am signed in. Perhaps the screen tells me I am with my username displayed. 
+- As a user, I want to know when I won or lost.
+- As a user, I want to hit a button to reset when I know that I will not win.
+- 
+  
 
 ### Wireframe
 
