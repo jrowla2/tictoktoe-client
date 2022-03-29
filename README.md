@@ -1,30 +1,25 @@
-# tictoktoe-client
-tik tak toe game from api
+# Application Title: Tic Tac Toe Game
 
-# Application Title: A Description
-
-This application is a game of tik tak toe between two players where you must login to play.
+This is a game of tic tac toe between two players where you must be logged in to play.
 
 ## Important Links
 
-- [Deployed Client](www.link.com)
+- [Deployed Client](https://jrowla2.github.io/tictoktoe-client/)
 
 ## Planning
 
 ### User Stories
 
-- As a user, I want to select either x or o to start with.
-- As a user, I want to know if I am signed in. Perhaps the screen tells me I am with my username displayed. 
-- As a user, I want to know when I won or lost.
-- As a user, I want to hit a button to reset when I know that I will not win.
-- 
+- As a user, I want to sign up, sign in.
+- As a user, I want to know that I am signed in.
+- As a user, I want to know if my sign up/in was not successful.
+- As a user, I want to sign out when done.
+- As a user, I want to be to choose between x and o.
+- As a user, I would like to know whose turn it is, if possible.
+- As a user, I want to know the result.
+- As a user, I want to restart the game, even if in the middle of the game.
   
 
 ### Wireframe
 
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
-
-
-<!-- README.md must include wireframes and user stories.
-README.md must include an explanation of the app.
-README.md must include a link the deployed application. -->
+![wireframe](https://media.git.generalassemb.ly/user/41818/files/5d27bd80-ab58-11ec-8daa-918070f78054)
