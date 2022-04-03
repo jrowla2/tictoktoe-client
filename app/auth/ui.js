@@ -1,5 +1,6 @@
 'use strict'
 
+const { onRestart } = require('../game/events.js')
 const store = require('../store.js')
 
 // this function is hiding the auth class in html until signed in
@@ -57,6 +58,7 @@ const onSignOutSuccess = function () {
   // these functions are hiding the game and showing the log in
   $('#auth').hide()
   $('#unAuth').show()
+  onRestart()
 }
 
 const onSignOutFailure = function () {

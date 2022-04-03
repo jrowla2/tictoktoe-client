@@ -1,6 +1,6 @@
 'use strict'
 
-// const store = require('../store.js')
+const store = require('../store.js')
 const gameApi = require('../auth/api.js')
 let move = 1
 let play = true
@@ -46,7 +46,7 @@ const onClickBox = function (event) {
       over: findWinner() !== ''
     }
   }
-  console.log(gamePlay)
+  console.log();
   gameApi.updateGame(gamePlay)
   if (turn === 'x') {
     turn = 'o'
