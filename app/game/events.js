@@ -60,6 +60,7 @@ const onRestart = function (event) {
   $('#result').text('')
   play = true
   move = 1
+  turn = 'x'
 }
 
 function findWinner () {
