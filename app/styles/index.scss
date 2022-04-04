@@ -1,0 +1,71 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    text-align: center;
+    margin: auto;
+    width: 55%;
+    padding: 10px;
+    background-color: darkgrey;
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  // .game-board {
+  //   width: 125%;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  .box {
+    flex: 0 0 33%;               /* don't grow, don't shrink, width */
+    height: 50px;
+    width: 50px;
+    border: 2px solid #222;
+    margin-bottom: 2px;
+    font-size: 48px;
+    line-height: 50px;
+    justify-content: center;
+  }
+  body {
+    font-size: 120%;
+    width: 95%;
+    margin: 5px; 
+    background-color: palegreen
+  }
+}
+
+// .game-board {
+//     display: grid;
+//     grid-template-rows: 100px 100px 100px;
+//     grid-template-columns: 100px 100px 100px;
+// }
+
+
+
+.game-board {
+  display: flex;                       /* establish flex container */
+  flex-wrap: wrap;                     /* enable flex items to wrap */
+  justify-content: space-around;
+  
+}
+.box {
+  flex: 0 0 33%;               /* don't grow, don't shrink, width */
+  height: 100px;
+  width: 100px;
+  margin-bottom: 2px;
+  border: 2px solid #222;
+  font-size: 95px;
+  line-height: 100px;
+  vertical-align: middle;
+}
+
+.boxOdd {
+    background-color: pink;
+}
+
+.boxEven {
+    background-color: cyan;
+}
+.result {
+  font-size: 40px;
+  color: greenyellow;
+}
